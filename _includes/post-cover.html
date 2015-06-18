@@ -1,0 +1,7 @@
+{% for asset in assets %}
+  {% if asset.type == 'image' %}
+    <figure class="post-cover">
+      <img class="post-image" src="{{asset.url}}">
+    </figure>
+  {% endif %}
+{% endfor %}

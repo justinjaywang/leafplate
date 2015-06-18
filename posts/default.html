@@ -1,0 +1,19 @@
+{% capture content %}
+  <main class="page-main content">
+    {% comment %}
+    <h1 class="content-title">posts/default.html: {{title}}</h1>
+    <section class="content-body">
+      {{body}}
+    </section>
+    {% endcomment %}
+    
+    {% assign post = current %}
+    {% include 'includes/post' %}
+
+    {% if parent %}
+      <a href="{{parent.url}}">&larr; Back to {{parent.title}}</a>
+    {% endif %}
+  </main>
+{% endcapture %}
+
+{% include 'layouts/default' %}

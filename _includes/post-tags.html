@@ -1,0 +1,10 @@
+<ul class="post-tags">
+  {% for tagset in post.taxonomy %}
+    <strong>{{tagset.key}} ({{tagset | size}} tags)</strong>
+    <ul>
+      {% for tag in tagset %}
+        <li><a href="{{tag.url}}">{{tag.value}}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</ul>

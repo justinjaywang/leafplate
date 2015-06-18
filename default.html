@@ -4,11 +4,11 @@
     <section class="content-body">
       {{body}}
     </section>
-    {% comment %}
-      {% for post in posts %}
-        {% include 'includes/post' %}
-      {% endfor %}
-    {% endcomment %}
+    {% for post in posts %}
+      {% assign post = current %}
+    
+      {% include 'includes/post' %}
+    {% endfor %}
   </main>
 {% endcapture %}
 {% include 'layouts/default' %}
