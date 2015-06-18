@@ -1,9 +1,27 @@
 <header class="page-header">
   <nav class="page-nav">
     <ul class="page-nav-list">
-    {% for page in site.pages %}
-      <li class="page-nav-list-item"><a class="page-nav-link {% if page.url == url %}active{% endif %}" href="{{page.url}}">{{page.title}}</a></li>
-    {% endfor %}
+      {% if site.meta.custom_menu %}
+        <li class="page-nav-list-item">
+          <a class="page-nav-link {% if page.url == url %}active{% endif %}" href="/">Latest</a>
+        </li>
+        <li class="page-nav-list-item">
+          <a class="page-nav-link {% if page.url == url %}active{% endif %}" href="/posts/tags">Tags</a>
+        </li>
+        <li class="page-nav-list-item">
+          <a class="page-nav-link {% if page.url == url %}active{% endif %}" href="/posts/artists">Artists</a>
+        </li>
+        <li class="page-nav-list-item">
+          <a class="page-nav-link {% if page.url == url %}active{% endif %}" href="/posts/archive">Archive</a>
+        </li>
+        <li class="page-nav-list-item">
+          <a class="page-nav-link {% if page.url == url %}active{% endif %}" href="/about">About</a>
+        </li>
+      {% else %}
+        {% for page in site.pages %}
+          <li class="page-nav-list-item"><a class="page-nav-link {% if page.url == url %}active{% endif %}" href="{{page.url}}">{{page.title}}</a></li>
+        {% endfor %}
+      {% endif %}
     </ul>
   </nav>
 </header>

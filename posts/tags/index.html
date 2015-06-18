@@ -1,0 +1,18 @@
+{% capture content %}
+  <main class="page-main content">
+    <h1 class="content-title">tags/index.html: {{title}}</h1>
+    <section class="content-body">
+      {{body}}
+    </section>
+    
+    <ul class="tag-list">
+      {% for tag in tags %}
+        <li class="tag-list-item">
+          <a href="{{tag.url}}">{{tag}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+{% endcapture %}
+
+{% include 'layouts/default' %}

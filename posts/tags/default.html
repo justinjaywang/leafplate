@@ -1,14 +1,14 @@
 {% capture content %}
   <main class="page-main content">
-    <h1 class="content-title">default.html: {{title}}</h1>
+    <h1 class="content-title">tags/default.html: {{title}}</h1>
     <section class="content-body">
       {{body}}
     </section>
-    {% for post in posts | limit:72 %}
-      {% assign post = current %}
 
+    {% for post in posts %}
       {% include 'includes/post' %}
     {% endfor %}
   </main>
 {% endcapture %}
+
 {% include 'layouts/default' %}
