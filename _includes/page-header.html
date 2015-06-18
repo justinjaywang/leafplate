@@ -1,0 +1,9 @@
+<header class="page-header">
+  <nav class="page-nav">
+    <ul class="page-nav-list">
+    {% for page in site.pages %}
+      <li class="page-nav-list-item"><a class="page-nav-link {% if page.url == url %}active{% endif %}" href="{{page.url}}">{{page.title}}</a></li>
+    {% endfor %}
+    </ul>
+  </nav>
+</header>
