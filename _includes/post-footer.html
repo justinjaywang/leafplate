@@ -1,0 +1,18 @@
+<footer class="post-footer">
+  <section class="post-date">
+    Posted on {{post.date | date: "%b %d, %Y"}} by {{post.author.fullname}}
+  </section>
+  <ul class="post-tags">
+  {% for tag in taxonomy['themes'] %}
+    <li><a href="{{tag.url}}">{{tag.value}}</a></li>
+  {% endfor %}
+  {% for tagset in taxonomy %}
+    <strong>{{tagset.key}} ({{tagset | size}} tags)</strong>
+    <ul>
+      {% for tag in tagset %}
+        <li><a href="{{tag.url}}">{{tag.value}}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+  </ul>
+</footer>
