@@ -4,9 +4,9 @@
     <section class="content-body">
       {{body}}
     </section>
-    
+    {% assign sorted_tags = tags | sort:'value' %}
     <ul class="tag-list">
-      {% for tag in tags %}
+      {% for tag in sorted_tags %}
         <li class="tag-list-item">
           <a href="{{tag.url}}">{{tag}}</a>
         </li>

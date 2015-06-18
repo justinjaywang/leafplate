@@ -6,7 +6,6 @@
     </section>
     {% for post in posts | limit:72 %}
       {% assign post = current %}
-
       {% include 'includes/post' %}
     {% endfor %}
   </main>
