@@ -4,51 +4,20 @@
 <body>
   {% include 'includes/page-header' %}
 
-  <main class="page-main content">
+  {{content}}
 
-    <!-- <h1 class="content-title">{{title}}</h1>
-    <section class="content-body">
-      {{body}}
-    </section> -->
-
-    {{content}}
-
-    <!-- {% if type == 'post' %}
-      {% for post in posts %}
-        <article class="post">
-          {% for asset in assets %}
-            {% if asset.type == 'image' %}
-              <img class="post-image" src="{{asset.url}}">
-            {% endif %}
-          {% endfor %}
-          <h1 class="post-title">{{post.title}}</h1>
-          <section class="post-body">
-            {{post.body}}
-          </section>
-          <footer class="post-footer">
-            <section class="post-date">
-              Posted on {{post.date | date: "%b %d, %Y"}} by {{post.author.fullname}}
-            </section>
-            <ul class="post-tags">
-            {% for tag in taxonomy['themes'] %}
-              <li><a href="{{tag.url}}">{{tag.value}}</a></li>
-            {% endfor %}
-            </ul>
-          </footer>
-        </article>
-      {% endfor %}
-    {% elsif type == 'page' %}
-
-    {% elsif type == 'archive' %}
-    
-    {% elsif type == 'taxonomy' %}
-    
-    {% endif %} -->
-
-  </main>
+  {% comment %}
+  {% if type == 'post' %}
+    {% for post in posts %}
+      {% include 'includes/post' %}
+    {% endfor %}
+  {% elsif type == 'page' %}
+  {% elsif type == 'archive' %}
+  {% elsif type == 'taxonomy' %}
+  {% endif %}
+  {% endcomment %}
   
   {% include 'includes/page-footer' %}
-
   {% include 'includes/scripts' %}
 </body>
 </html>

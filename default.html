@@ -1,6 +1,14 @@
-{% include 'layouts/default' %}
-
 {% capture content %}
-<!-- TEMP -->
-<h2>this is the default template</h2>
+  <main class="page-main content">
+    <h1 class="content-title">default.html: {{title}}</h1>
+    <section class="content-body">
+      {{body}}
+    </section>
+    {% comment %}
+      {% for post in posts %}
+        {% include 'includes/post' %}
+      {% endfor %}
+    {% endcomment %}
+  </main>
 {% endcapture %}
+{% include 'layouts/default' %}
