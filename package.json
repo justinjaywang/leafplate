@@ -1,0 +1,17 @@
+{
+  "name": "Mixtapes",
+  "description": "Some mixtapes, WIP.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinjaywang/mixtapes.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.5",
+    "gulp-watch": "^4.2.4"
+  }
+}

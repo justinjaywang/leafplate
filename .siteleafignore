@@ -2,6 +2,8 @@
 Thumbs.db
 config.ru
 _meta/
+node_modules/
+*.log
 .git
 README.md
 source/

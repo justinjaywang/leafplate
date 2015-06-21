@@ -2,3 +2,7 @@
 Thumbs.db
 config.ru
 _meta/
+node_modules/
+*.log
+all.css
+all.min.css

@@ -1,7 +1,5 @@
 <article class="post">
-
   {% include 'includes/post-cover' %}
-
   <h1 class="post-title">
     {% if type == 'post' %}
       {{post.title}}
@@ -9,11 +7,8 @@
       <a href="{{post.url}}">{{post.title}}</a>
     {% endif %}
   </h1>
-
   <section class="post-body">
     {{post.body}}
   </section>
-
   {% include 'includes/post-footer' %}
-
 </article>

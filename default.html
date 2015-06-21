@@ -4,7 +4,7 @@
     <section class="content-body">
       {{body}}
     </section>
-    {% for post in posts | limit:72 %}
+    {% for post in posts | limit:24 %}
       {% assign post = current %}
       {% include 'includes/post' %}
     {% endfor %}

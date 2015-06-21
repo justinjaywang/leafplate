@@ -1,10 +1,8 @@
 {% capture content %}
   <main class="page-main content">
     <h1 class="content-title">posts/default.html: {{title}}</h1>
-    
     {% assign post = current %}
     {% include 'includes/post' %}
-
     {% if parent %}
       <a href="{{parent.url}}">&larr; Back to {{parent.title}}</a>
     {% endif %}
