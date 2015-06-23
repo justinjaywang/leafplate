@@ -1,10 +1,10 @@
 {
-  "name": "Mixtapes",
-  "description": "Some mixtapes, WIP.",
+  "name": "leafplate",
+  "description": "Boilerplate for Siteleaf theme",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinjaywang/mixtapes.git"
+    "url": "https://github.com/justinjaywang/leafplate.git"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
