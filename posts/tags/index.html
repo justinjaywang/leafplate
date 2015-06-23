@@ -1,9 +1,13 @@
 {% capture content %}
   <main class="page-main content">
+    {% comment %}
+    TEMP
     <h1 class="content-title">tags/index.html: {{title}}</h1>
     <section class="content-body">
       {{body}}
     </section>
+    {% endcomment %}
+    
     {% assign sorted_tags = tags | sort:'value' %}
     <ul class="tag-list">
       {% for tag in sorted_tags %}

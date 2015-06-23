@@ -6,3 +6,128 @@
 *:after {
   .box-sizing(border-box);
 }
+html {
+  font-size: @font-size--html;
+}
+body {
+  color: @color--body;
+  background-color: @background-color--body;
+  font-family: @font-family--body;
+  font-size: @font-size--body;
+  line-height: @line-height--body;
+  letter-spacing: @letter-spacing--body;
+  text-rendering: optimizeLegibility;
+  .font-smoothing(antialiased);
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+// typography
+a {
+  color: @color--a;
+  text-decoration: none;
+}
+h1 {
+  font-size: @font-size--h1;
+  line-height: @line-height--h1;
+  font-weight: @font-weight--h1;
+  letter-spacing: @letter-spacing--h1;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: @font-size--headings;
+  line-height: @line-height--headings;
+  font-weight: @font-weight--headings;
+  letter-spacing: @letter-spacing--headings;
+}
+
+// images
+img {
+  .img-responsive();
+  .margin-center();
+}
+
+// containers
+.container {
+  width: 100%;
+  .margin-center();
+}
+.paddedContainer {
+  padding-left: @container-gutter;
+  padding-right: @container-gutter;
+}
+.container--narrow {
+  &:extend(.container);
+  &:extend(.paddedContainer);
+  max-width: @max-width--container--narrow;
+}
+.container--wide {
+  &:extend(.container);
+  max-width: @max-width--container--wide;
+}
+.container--full {
+  &:extend(.container);
+}
+
+// layout
+.page-header {
+  &:extend(.container--narrow);
+}
+.page-main {
+  &:extend(.container--narrow);
+}
+.page-header,
+.page-main {
+}
+
+// header
+.page-nav-list {
+  list-style: none;
+}
+
+// content
+.post {
+  margin-bottom: @margin-bottom--post;
+}
+.post h1 {
+  margin-bottom: @margin-bottom--h1;
+}
+.post-cover,
+.post p,
+.post ol {
+  margin-bottom: @margin-bottom--p;
+}
+.post ol {
+}
+.post-tags {
+  list-style: none;
+}
+.post-tag {
+  display: inline-block;
+}
+
+// responsiveness
+// : small screens and larger
+@media (min-width: @width-screen-sm-min) {
+}
+// : medium screens and larger
+@media (min-width: @width-screen-md-min) {
+}
+// : large screens
+@media (min-width: @width-screen-lg-min) {
+}
+// : medium screens and smaller
+@media (max-width: @width-screen-md-max) {
+}
+// : small screens and smaller
+@media (max-width: @width-screen-sm-max) {
+  html {
+    font-size: @font-size--html-sm;
+  }
+}
+// : extra small screens
+@media (max-width: @width-screen-xs-max) {
+}

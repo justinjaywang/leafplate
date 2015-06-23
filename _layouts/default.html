@@ -2,6 +2,7 @@
 <html lang="en">
 {% include 'includes/head' %}
 <body>
+  {% comment %}
   {% if type == 'post' %}
     type == post
   {% elsif type == 'page' %}
@@ -15,12 +16,12 @@
   {% else %}
     type == none of the above
   {% endif %}
-
-  {% include 'includes/page-header' %}
-
-  {{content}}
+  {% endcomment %}
   
+  {% include 'includes/page-header' %}
+  {{content}}
   {% include 'includes/page-footer' %}
+  
   {% include 'includes/scripts' %}
 </body>
 </html>

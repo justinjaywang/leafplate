@@ -1,0 +1,153 @@
+// colors
+// : variables
+@color-gray-darkest:  hsl(0,0%,10%);
+@color-gray-darker:   hsl(0,0%,20%);
+@color-gray-dark:     hsl(0,0%,40%);
+@color-gray:          hsl(0,0%,60%);
+@color-gray-light:    hsl(0,0%,80%);
+@color-gray-lighter:  hsl(0,0%,90%);
+@color-gray-lightest: hsl(0,0%,95%);
+@color-white:         hsl(0,0%,100%);
+
+// : applications
+@background-color--body:           @color-white;
+@color--body:                      @color-gray-darker;
+@color--a:                         inherit;
+// @color--h1:                        inherit;
+// @color--h2:                        inherit;
+// @color--h3:                        inherit;
+// @background-color--code:           @color-gray-lightest;
+// @color--pre-subdued:               @color-gray;
+// @color--pre-normal:                @color-gray-darker;
+// @color--pre-alt:                   @color-gray;
+// @color--pre-em:                    @color-gray-darker;
+// @color--pre-strong:                @color-gray-darker;
+// @color--nav:                       @color-white;
+// @color--projectCard:               @color-white;
+// @color--project-meta:              @color-gray;
+// @color--project-content-list-item: @color-gray;
+// @color--box-shadow--blockquote:    @color-gray-lighter;
+// @color--project-figure-caption:    @color-gray;
+// @color--hr:                        @color-gray-lighter;
+// @color--underline:                 @color-gray-light;
+// @color--img-border:                @color-gray-lighter;
+// @color--box-shadow--stickyHeader:  @color-gray-light;
+// @background-color--page-header:    @color-gray-darkest;
+// @color--box-shadow--page-header:   rgba(0,0,0,0.1);
+
+// sizing
+@size-tera:         3;
+@size-giga:         2.25;
+@size-mega:         1.75;
+@size-largest:      1.5;
+@size-larger:       1.3333;
+@size-large:        1.1667;
+@size-base:         1;
+@size-small:        0.9167;
+@size-smaller:      0.8333;
+@size-smallest:     0.75;
+@size-micro:        0.6667;
+@size-nano:         0.5;
+@size-pico:         0.3333;
+@size-em-tera:      unit(@size-tera, em);
+@size-em-giga:      unit(@size-giga, em);
+@size-em-mega:      unit(@size-mega, em);
+@size-em-largest:   unit(@size-largest, em);
+@size-em-larger:    unit(@size-larger, em);
+@size-em-large:     unit(@size-large, em);
+@size-em-base:      unit(@size-base, em);
+@size-em-small:     unit(@size-small, em);
+@size-em-smaller:   unit(@size-smaller, em);
+@size-em-smallest:  unit(@size-smallest, em);
+@size-em-micro:     unit(@size-micro, em);
+@size-em-nano:      unit(@size-nano, em);
+@size-em-pico:      unit(@size-pico, em);
+@size-rem-tera:     unit(@size-tera, rem);
+@size-rem-giga:     unit(@size-giga, rem);
+@size-rem-mega:     unit(@size-mega, rem);
+@size-rem-largest:  unit(@size-largest, rem);
+@size-rem-larger:   unit(@size-larger, rem);
+@size-rem-large:    unit(@size-large, rem);
+@size-rem-base:     unit(@size-base, rem);
+@size-rem-small:    unit(@size-small, rem);
+@size-rem-smaller:  unit(@size-smaller, rem);
+@size-rem-smallest: unit(@size-smallest, rem);
+@size-rem-micro:    unit(@size-micro, rem);
+@size-rem-nano:     unit(@size-nano, rem);
+@size-rem-pico:     unit(@size-pico, rem);
+
+// typography
+// : font-size-variables
+@font-size-px-base:    16px;
+@font-size-px-base-sm: 14px;
+// : font-size-applications
+@font-size--html:     @font-size-px-base;
+@font-size--html-sm:  @font-size-px-base-sm;
+@font-size--body:     @size-em-base;
+@font-size--h1:       @size-em-largest;
+@font-size--headings: @size-em-base;
+// : font-family-variables
+@font-family-sans-serif: sans-serif;
+@font-family-serif:      "Times New Roman", Times, serif;
+@font-family-monospace:  Consolas, Monaco, "Andale Mono", monospace;
+// : font-family-applications
+@font-family--body:     @font-family-sans-serif;
+// @font-family--body:     @font-family-serif;
+// @font-family--body:     @font-family-monospace;
+// : font-weight-variables
+@font-weight-bold:   700;
+@font-weight-normal: 400;
+// : font-weight-applications
+@font-weight--h1:       @font-weight-normal;
+@font-weight--headings: @font-weight-normal;
+// : line-height-variables
+@line-height-tighter: 1;
+@line-height-tight:   1.286;
+@line-height-base:    1.429;
+@line-height-loose:   1.531;
+// : line-height-applications
+@line-height--body:     @line-height-tight;
+@line-height--h1:       @line-height-tighter;
+@line-height--headings: @line-height-tight;
+// : letter-spacing-variables
+@letter-spacing-tight: -0.02em;
+@letter-spacing-base:  0;
+@letter-spacing-loose: 0.02em;
+// : letter-spacing-applications
+@letter-spacing--body:     @letter-spacing-loose;
+@letter-spacing--h1:       @letter-spacing-loose;
+@letter-spacing--headings: @letter-spacing-loose;
+
+// // z-index
+// // : variables
+// @z-index-1: 100;
+// @z-index-2: 200;
+// // : applications
+// @z-index--body:                @z-index-1;
+// @z-index--page-header:         @z-index-2;
+
+// screen widths
+@width-screen-sm-min: 400px;
+@width-screen-md-min: 768px;
+@width-screen-lg-min: 1136px; // width of wide images
+@width-screen-xs-max: (@width-screen-sm-min - 1);
+@width-screen-sm-max: (@width-screen-md-min - 1);
+@width-screen-md-max: (@width-screen-lg-min - 1);
+
+// // layout
+@container-gutter:             1rem;
+@container-gutter-px:          (unit(@container-gutter) * @font-size-px-base);
+@max-width--container--narrow: 40rem; // a comfortable measure
+@max-width--container--wide:   (@width-screen-lg-min - @container-gutter-px * 2);
+
+// spacing and miscellaneous
+// : utility
+@computed-line-height--body:     unit((unit(@font-size--body) * @line-height--body), rem);
+@computed-line-height--h1:       unit((unit(@font-size--h1) * @line-height--h1), rem);
+@computed-line-height--headings: unit((unit(@font-size--headings) * @line-height--headings), rem);
+@line-height:                    @computed-line-height--body;
+// : applications
+@margin-bottom--post:  (@line-height * 6);
+@margin-bottom--h1:    ((@line-height * 2) - @computed-line-height--h1);
+@margin-bottom--p:     (@line-height * 1);
+@padding--page-header: (@line-height * 1.5);

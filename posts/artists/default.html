@@ -1,9 +1,13 @@
 {% capture content %}
   <main class="page-main content">
+    {% comment %}
+    TEMP
     <h1 class="content-title">artists/default.html: {{title}}</h1>
     <section class="content-body">
       {{body}}
     </section>
+    {% endcomment %}
+    
     {% for post in posts %}
       {% include 'includes/post' %}
     {% endfor %}
