@@ -2,8 +2,9 @@
 Thumbs.db
 config.ru
 _meta/
-node_modules/
 *.log
 .git
 README.md
-source/
+source/**
+node_modules/**
+gulpfile.js
